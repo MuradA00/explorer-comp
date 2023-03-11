@@ -1,0 +1,37 @@
+@mixin df($direction, $align) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+}
+
+@mixin psevdo {
+  position: absolute;
+  content: '';
+}
+
+@mixin bg_position {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+@mixin max-width($media) {
+  @media only screen and (max-width: $media) {
+    @content;
+  }
+}
+
+@mixin min-width($media) {
+  @media only screen and (min-width: $media) {
+    @content;
+  }
+}
+
+@function rem($pixel) {
+  @return math.div($pixel, 16) + rem;
+}
+
+@mixin w-h($width, $height) {
+  width: $width;
+  height: $height;
+}

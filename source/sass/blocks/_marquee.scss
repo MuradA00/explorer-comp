@@ -1,0 +1,50 @@
+.marquee {
+  @include df(row, center);
+  padding: 7px 0px 7px 1.5%;
+  border-top: 1px solid rgba(var(--border-clr), 1);
+  border-bottom: 1px solid rgba(var(--border-clr), 1);
+  &__list {
+    @include df(row, center);
+    flex-wrap: nowrap;
+  }
+  &__block {
+    width: max-content;
+    font-size: 0.75rem;
+    margin: 0px 1.25rem 0px 0px;
+    height: var(--m-h);
+    display: contents;
+  }
+  &__block-inner {
+    width: max-content;
+    text-decoration: none;
+    color: rgba(var(--b-clr), 1);
+    font-size: 12px;
+    display: flex;
+    height: var(--m-h);
+    margin: 0rem 1.25rem 0rem 0rem;
+  }
+  &__block-name {
+    font-weight: 600;
+    margin: 0rem 0.625rem 0rem 0rem;
+    width: max-content;
+  }
+  &__block-amount {
+    margin: 0rem 0.625rem 0rem 0rem;
+  }
+  &__index {
+    @include df(row, center);
+    margin: 0 0.625rem 0 0 0;
+    border-radius: 2px;
+    height: var(--m-h);
+    padding: 0 0.3125rem;
+    &_positive {
+      background-color: rgba(var(--g-clr), 1);
+    }
+    &_red {
+      background-color: rgba(var(--r-clr), 1);
+      img {
+        transform: scaleY(-1);
+      }
+    }
+  }
+}

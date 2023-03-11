@@ -1,0 +1,48 @@
+.heading {
+  width: 100%;
+  @include df(row, center);
+  margin-left: 0.9375rem;
+  min-height: var(--h-h);
+  @include df(row, center);
+  justify-content: center;
+  &__inner {
+    flex: 1;
+    @include df(row, center);
+  }
+  &__left {
+    flex: 1;
+    @include df(column, flex-start);
+  }
+  &__subheading {
+    font-size: 0.75rem;
+    color: rgba(var(--gr-clr), 1);
+    font-weight: 700;
+    cursor: pointer;
+  }
+  &__arrow {
+    span {
+      @include df(row, center);
+      justify-content: center;
+      @include w-h(var(--arr-w), var(--arr-h));
+      font-size: 1.6rem;
+      font-weight: bold;
+      transition: 200ms ease;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  &__title {
+    h1 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      transition: 100ms ease;
+      &:hover {
+        color: rgba(var(--b-clr), .7);
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.prices {
+  &__wrapper {
+    position: relative;
+    padding-top: 100%;
+    border-right: 1px solid rgba(var(--border-clr), 1);
+    border-bottom: 1px solid rgba(var(--border-clr), 1)
+  }
+  &__info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include df(column, center);
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content max-content;
+    grid-template-rows: 10%;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  &__flex-item {
+    display: contents;
+    grid-area: 1 / 5 / auto / auto;
+    &:hover {
+      .prices__flex-name {
+        font-weight: 700;
+      }
+      .prices__amount {
+        font-weight: 600;
+      }
+    }
+    img {
+      @include w-h(var(--c-w), var(--c-h));
+      margin: 0rem 0.3125rem 0rem 0.8125rem;
+    }
+  }
+  &__flex-name {
+    @include df(row, center);
+    grid-gap: 0.25rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 100%;
+  }
+  &__flex-coin {
+    font-size: 0.9187rem;
+  }
+  &__flex-coin-short {
+    text-transform: uppercase;
+    font-size: 0.7813rem;
+    color: rgba(var(--gr-clr), 1);
+    font-weight: 500;
+    @include df(row, center);
+  }
+  &__amount {
+    @include df(row, center);
+    font-size: 0.875rem;
+  }
+  &__index {
+    padding: 0rem 0.375rem 0rem 0.3125rem;
+    font-weight: 700;
+    font-size: 0.7875rem;
+    @include df(row, center);
+    &_positive {
+      color: rgba(var(--g-clr), 1);
+    }
+    &_negative {
+      color: rgba(var(--r-clr), 1);
+    }
+  }
+}
