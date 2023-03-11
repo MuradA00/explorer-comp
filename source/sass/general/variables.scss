@@ -16,6 +16,9 @@
     --c-w: 1.5625rem;
     --c-h: 1.5625rem;
 
+    --offset: 20vw;
+    --move-initial: calc(-25% + var(--offset));
+    --move-final: calc(-50% + var(--offset));
     --m-h: 0.9375rem;
 }
 

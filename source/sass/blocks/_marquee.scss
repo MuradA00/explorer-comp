@@ -6,6 +6,10 @@
   &__list {
     @include df(row, center);
     flex-wrap: nowrap;
+    animation: 20s linear 0s infinite normal none running marquee;
+    &:hover {
+      animation-play-state: paused;
+    }
   }
   &__block {
     width: max-content;
